@@ -17,8 +17,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Installer le SDK Android
-        uses: android-actions/setup-android@v3
+      - name: Accepter les licences du SDK Android (deja installe sur le runner)
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
 
       - name: Générer le wrapper Gradle
         working-directory: ChargingStudio
