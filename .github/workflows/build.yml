@@ -11,9 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Extraire ChargingStudio.zip
-        run: unzip -o ChargingStudio.zip -d .
-
       - name: Installer Java 17
         uses: actions/setup-java@v4
         with:

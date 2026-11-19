@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp">
+
+            <Button android:id="@+id/btnAddText" style="@style/ToolButton" android:text="Texte" />
+            <Button android:id="@+id/btnAddShape" style="@style/ToolButton" android:text="Forme" />
+            <Button android:id="@+id/btnAddImage" style="@style/ToolButton" android:text="Image" />
+            <Button android:id="@+id/btnAddBattery" style="@style/ToolButton" android:text="Batterie %" />
+            <Button android:id="@+id/btnEffect" style="@style/ToolButton" android:text="Effet" />
+            <Button android:id="@+id/btnColor" style="@style/ToolButton" android:text="Couleur" />
+            <Button android:id="@+id/btnDelete" style="@style/ToolButton" android:text="Supprimer" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:id="@+id/canvasContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="16dp"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rotation"
+            android:textColor="@color/text_secondary"
+            android:layout_gravity="center_vertical" />
+
+        <SeekBar
+            android:id="@+id/seekRotation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:max="360" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taille"
+            android:textColor="@color/text_secondary"
+            android:layout_gravity="center_vertical" />
+
+        <SeekBar
+            android:id="@+id/seekScale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:max="200" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/accent"
+        android:text="Enregistrer et activer" />
+
+</LinearLayout>

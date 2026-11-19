@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Charging Animation Studio</string>
+    <string name="animation_studio_title">Animation Studio</string>
+    <string name="aod_title">Charging AOD</string>
+</resources>
